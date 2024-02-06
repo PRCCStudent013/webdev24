@@ -3,8 +3,8 @@
       Project 02-01
 
       Celsius <-> Farenheit Coverter
-      Author: 
-      Date:   
+      Author: Desmon Neapolllioun
+      Date: 2/6/24
 
       Filename: project02-01.js
  */
