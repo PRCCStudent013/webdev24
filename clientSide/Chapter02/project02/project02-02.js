@@ -8,4 +8,7 @@
 
       Filename: project02-02.js
  */
- 
+let name = document.getElementById("name").oninput;
+let email = document.getElementById("email").oninput;
+let phone = document.getElementById("phone").oninput;
+

@@ -9,19 +9,22 @@
       Filename: project02-01.js
  */
 
-FahrenheitToCelsius(degree)
+function FahrenheitToCelsius(degree)
 {
-      return degree -= 32 / 1.8;
+      return degree = (degree - 32) / 1.8;
 }
 
-CelsiusToFahrenheit(degree)
+function CelsiusToFahrenheit(degree)
 {
-      return degree *= 1.8 + 32;
+      return degree = degree * 1.8 + 32;
 }
 
-document.getElementById("cValue").onchange = CDegree;
+document.getElementById("cValue").onchange = function(){
+      CDegree = document.getElementById("cValue").value;
+      document.getElementById("fValue").value = CelsiusToFahrenheit(CDegree)
+};
 
-CDegree()
-{
-
-}
+document.getElementById("fValue").onchange = function(){
+      FDegree = document.getElementById("fValue").value;
+      document.getElementById("cValue").value = FahrenheitToCelsius(FDegree)
+};
