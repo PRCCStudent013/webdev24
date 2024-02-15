@@ -21,10 +21,10 @@ function CelsiusToFahrenheit(degree)
 
 document.getElementById("cValue").onchange = function(){
       CDegree = document.getElementById("cValue").value;
-      document.getElementById("fValue").value = CelsiusToFahrenheit(CDegree)
+      document.getElementById("fValue").value = CelsiusToFahrenheit(CDegree);
 };
 
 document.getElementById("fValue").onchange = function(){
       FDegree = document.getElementById("fValue").value;
-      document.getElementById("cValue").value = FahrenheitToCelsius(FDegree)
+      document.getElementById("cValue").value = FahrenheitToCelsius(FDegree);
 };

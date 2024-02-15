@@ -8,7 +8,21 @@
 
       Filename: project02-02.js
  */
-let name = document.getElementById("name").oninput;
-let email = document.getElementById("email").oninput;
-let phone = document.getElementById("phone").oninput;
 
+function verifyForm(){
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let phone = document.getElementById("phone").value;
+
+      if (name && email && phone)
+      {
+            window.alert("Thank You!");
+      }
+      else
+      {
+            window.alert("Please fill in all fields.");            
+      }
+}
+
+
+document.getElementById("submit").addEventListener("click", verifyForm);
