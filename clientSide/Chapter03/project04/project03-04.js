@@ -10,7 +10,7 @@
 */
 
 let reviewers = ["WillHa85", "GoldFry26", "Mittens41", "Tompkins8"];
-let reviewType = ["P", "N", "", ""]
+let reviewType = ["P", "N", "", ""];
 let stars = [5, 2, 1, 4];
 let reviewDates = ["11/18/2024", "11/17/2024", "11/15/2024", "11/10/2024"];
 let reviews = [
@@ -25,7 +25,7 @@ function starImages(rating)
 {
       let imageText = "";
 
-      for (let i = 1; i < rating-1; i++)
+      for (let i = 0; i < rating; i++)
       {
             imageText += "<img src= 'star.png' alt = ''>";
       }
@@ -33,7 +33,7 @@ function starImages(rating)
       return imageText;
 }
 
-for ( let i = 0; i < reviewers-1; i++)
+for (let i = 0; i < reviewers.length; i++)
 {
       let reviewCode = "";
 
@@ -43,14 +43,15 @@ for ( let i = 0; i < reviewers-1; i++)
       }
       else if (reviewType[i] == "N")
       {
-            reviewCode += "<table class = 'new'>";
+            reviewCode += "<table class='new'>";
       }
       else
       {
             reviewCode += "<table>";
       }
 
-      reviewCode += "<caption>" + reviewTitles[i] + "</caption>";
+      reviewCode += "<caption>" + reviewTitles[i] + "</br>";
+      reviewCode += starImages(stars[i]) + "</caption>";
       reviewCode += "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>";
       reviewCode += "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>";
       reviewCode += "<tr><td colspan='2'>" + reviews[i] + "</td></tr>";
