@@ -75,6 +75,7 @@ function createLightbox() {
       let image = document.createElement("img");
       image.src = imgFiles[i];
       image.alt = imgCaptions[i];
+      image.onclick = createOverlay;
       lbImages.appendChild(image);
    }
    // Function to move forward through the image list
@@ -89,6 +90,35 @@ function createLightbox() {
    lbImages.firstElementChild);
       (currentImg > 1) ? currentImg-- : currentImg = imgCount;
       lbCounter.textContent = currentImg + " / " + imgCount;
+   }
+
+   function createOverlay() {
+      let overlay = document.createElement("div");
+      overlay.id = "lbOverlay";
+
+      // Add the figure box to the overlay
+      let figureBox = document.createElement("figure");
+      overlay.appendChild(figureBox);
+
+      // Add the image to the figure box
+      let overlayImage = this.cloneNode("true");
+      figureBox.appendChild(overlayImage);
+
+      // Add the caption to the figure box
+      let overlayCaption = document.createElement("figcaption");
+      overlayCaption.textContent = this.alt;
+      figureBox.appendChild(overlayCaption);
+
+      // Add a close button to the overlay
+      let closeBox = document.createElement("div");
+      closeBox.id = "lbOverlayClose";
+      closeBox.innerHTML = "&times;";
+      closeBox.onclick = function() {
+         document.body.removeChild(overlay);
+      }
+      overlay.appendChild(closeBox);
+
+      document.body.appendChild(overlay);
    }
 }
 
