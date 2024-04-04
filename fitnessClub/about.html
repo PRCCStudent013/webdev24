@@ -20,6 +20,19 @@ on 01/24/2024 -->
 <body>
 
     <div id="container">
+        <!--Mobile Nav-->
+        <nav class="mobile-nav">
+            <div id="menu-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="classes.html">Classes</a>
+                <a href="nutrition.html">Nutrition</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <a class="menu-icon">
+                <div>&#9776;</div>
+            </a>
+        </nav>
         <!-- Use the header area for the website name or logo -->
         <header>
             <img src="images/forward-fitness-logo.png" alt="Forward Fitness Club Logo">
@@ -38,7 +51,15 @@ on 01/24/2024 -->
 
         <!-- Use the main area to add the main content of the webpage -->
         <main>
-            <section id="weight">
+            <video controls poster="images/hero-image.jpg">
+                <source src="media/ffc_video.mp4" type="video/mp4">
+                <source src="media/ffc_video.webm" type="video/webm">
+                <p>Your browser does not support the video element.</p>
+                <track src="media/captions.vtt" kind="captions" srclang="en" label="Captions">
+                <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+            </video>
+            
+            <section id="weights">
                 <h1>Weights</h1>
                 <img src="images/people-with-weights.jpg" alt="Two people working out with a weight in each hand"
                     class="round">
@@ -106,7 +127,7 @@ on 01/24/2024 -->
 
         <!-- Use the footer area to add webpage footer content -->
         <footer>
-            <p>&copy; Copyright 2021. All Rights Reserved, Probably.</p>
+            <p>&copy; Copyright 2021. All Rights Reserved</p>
             <p><a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>
 
         </footer>

@@ -5,7 +5,7 @@ File Name: styles.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,6 +14,11 @@ body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, 
 /* Style rules for body and images */
 body {
     background-color: #000;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
 }
 
 img {
@@ -35,6 +40,22 @@ header {
     height: 190px;
 }
 
+/* Style rules for hamburger menu */
+.mobile-nav a {
+    color: #fff;
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 3%;
+    display: block;
+}
+.mobile-nav a.menu-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 header img {
     margin: 0 auto;
 }
@@ -67,13 +88,17 @@ nav li a {
     text-decoration: none;
 }
 
-/* Show mobile class, hide tablet-desktop class */
+/* Show mobile class, hide tablet-desktop class and menu-links */
 .mobile {
     display: block;
 }
 
-.tablet-desktop {
+.tablet-desktop, #menu-links {
     display: none;
+}
+
+video {
+    margin: 0 auto 4%;
 }
 
 /* Style rules for main content*/
@@ -183,6 +208,41 @@ article:nth-of-type(2) {
     height: 50%;
 }
 
+#form {
+    margin-top: 2%;
+    background-color: #f2f2f2;
+    padding: 2%;
+}
+
+#form h2 {
+    text-align: center;
+}
+
+/* Style rules for form elements */
+fieldset, input, select, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 3%;
+}
+
+form #submit {
+    margin: 0 auto;
+    border: none;
+    display: block;
+    padding: 2%;
+    background-color: #b3b3b3;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
 /* Style rules for footer content*/
 footer p {
     font-size: 0.75em;
@@ -204,7 +264,7 @@ footer p a {
         display: block;
     }
 
-    .mobile {
+    .mobile, .mobile-nav {
         display: none;
     }
 
@@ -314,6 +374,33 @@ footer p a {
         background-color: #ccc;
     }
 
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Tablet Viewport: Animation */
+    @-webkit-keyframes text-animation {
+        0% { font-size: 1em; }
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+    }
+
+    @keyframes text-animation {
+        0% { font-size: 1em; }
+        50% { font-size: 2em; }
+        100% { font-size: 1.35em; }
+    }
+
+    figcaption {
+        -webkit-animation-name: text-animation;
+        animation-name: text-animation;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+    }
 }
 
 /* Media Query for Desktop Viewport */
@@ -340,6 +427,11 @@ footer p a {
     nav li {
         border: none;
     }
+    nav li a:hover {
+        color: #000;
+        background-color: #fff;
+        transform: scale(1.3);
+    }
 
     nav li a {
         padding: 0.5em 1em;
@@ -363,6 +455,11 @@ footer p a {
         font-size: 1.75em;
     }
 
+    .frame:hover {
+        opacity: 1;
+        box-shadow: 8px 8px 10px #808080;
+        transform: translateY(10px);
+    }
     .pic-text {
         font-size: 1.5em;
         padding: 20px;
@@ -377,7 +474,7 @@ footer p a {
         box-shadow: 8px 8px 10px #808080;
     }
 
-    #weight, #cardio, #training {
+    #weights, #cardio, #training {
         width: 29%;
         float: left;
         margin: 0 2%;
@@ -385,6 +482,21 @@ footer p a {
 
     #exercises {
         clear: left;
+    }
+
+    /* Desktop Viewport: Style rules for form elements */
+    form {
+        width: auto;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+
+    .bin {
+        grid-column: 1 / span 3;
     }
 
 }
@@ -395,6 +507,10 @@ footer p a {
     #container {
         width: 1920px;
         margin: 0 auto;
+    }
+
+    table {
+        width: 80%;
     }
 
 }
