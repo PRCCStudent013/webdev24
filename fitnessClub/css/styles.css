@@ -31,6 +31,23 @@ img {
     box-sizing: border-box;
 }
 
+/* Style rules for skip navigation link */
+.skip {
+    position: absolute;
+    left: -999px;
+}
+
+.skip:focus {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    padding: 0.5%;
+    top: auto;
+    left: auto;
+    right: 1px;
+    z-index: 1;
+}
+
 /* Style rules for mobile viewport */
 
 /* Style rule for header */
@@ -56,37 +73,9 @@ header {
     right: 0;
     top: 0;
 }
-header img {
+/* header img {
     margin: 0 auto;
-}
-
-/* Style rules for navigation area */
-nav {
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav li {
-    font-size: 1.5em;
-    font-family: "Francois One", sans-serif;
-    border-top: 1px solid #fff;
-}
-
-nav li:first-child {
-    border-top: none;
-}
-
-nav li a {
-    display: block;
-    color: #fff;
-    padding: 0.5em 1em;
-    text-decoration: none;
-}
+} */
 
 /* Show mobile class, hide tablet-desktop class and menu-links */
 .mobile {
@@ -244,16 +233,29 @@ form #submit {
 }
 
 /* Style rules for footer content*/
-footer p {
+footer .copyright {
     font-size: 0.75em;
     text-align: center;
     color: #fff;
-    padding: 0 1em;
+    padding: 2% 4%;
+    float: left;
+    width: 75%;
 }
 
 footer p a {
     color: #fff;
     text-decoration: none;
+}
+
+.social {
+    float: right;
+    width: 20%;
+    padding: 2%;
+}
+
+.social img {
+    display: inline-block;
+    padding: 5%;
 }
 
 /* Media Query for Tablet Viewport */
@@ -274,8 +276,18 @@ footer p a {
     }
 
     /* Tablet Viewport: Style rules for nav area */
+    nav {
+        padding: 1%;
+        margin-bottom: 1%;
+    }
+
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+    }
     nav li {
-        border-top: none;
+        font-size: 1.5em;
+        font-family: "Francois One", sans-serif;    
         display: inline-block;
         border-right: 1px solid #fff;
     }
@@ -285,6 +297,9 @@ footer p a {
     }
 
     nav li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
         padding: 0.1em 0.75em;
     }
 
@@ -334,6 +349,15 @@ footer p a {
     
     #exercises dd {
         padding: 0.5% 1% 2% 0;
+    }
+
+    .viewex {
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #example {
+        display: none;
     }
 
     .tel-num {
@@ -482,6 +506,11 @@ footer p a {
 
     #exercises {
         clear: left;
+    }
+
+    .offer:hover {
+        transform: scale(1.25);
+        cursor: pointer;
     }
 
     /* Desktop Viewport: Style rules for form elements */

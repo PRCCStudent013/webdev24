@@ -3,10 +3,11 @@
 on 01/24/2024 -->
 <html lang="en">
 <head>
+    <title>Contact Us - Location | Forward Fitness Club</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Forward Fitness Club</title>
+    <meta name="description" content="Forward Fitness Club provides a complimentary one-week trial membership. Contact us today to learn more.">
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -14,8 +15,12 @@ on 01/24/2024 -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 
+    <script src="scripts/script.js" defer></script>
+
 </head>
 <body>
+    <!-- Skip to Content Link -->
+    <a class="skip" href="#content">Skip to Content</a>
 
     <div id ="container">
         <!--Mobile Nav-->
@@ -27,7 +32,7 @@ on 01/24/2024 -->
                 <a href="nutrition.html">Nutrition</a>
                 <a href="contact.html">Contact Us</a>
             </div>
-            <a class="menu-icon">
+            <a class="menu-icon" onclick="hamburger()">
                 <div>&#9776;</div>
             </a>
         </nav>
@@ -48,12 +53,13 @@ on 01/24/2024 -->
         </nav>
 
         <!-- Use the main area to add the main content of the webpage -->
-        <main>
+        <main id="content">
             <div id="contact">
                 <h2>Ready to get started? Contact us today.</h2>
                 <h4 class="mobile tel-link"><a href="tel:8145559608">(814) 555-9608</a></h4>
                 <h4 class="tablet-desktop tel-num">(814) 555-9608</h4>
                 <h4>Email us: <a href="mailto:forwardfitness@club.net" class="contact-email-link">forwardfitness@club.net</a></h4>
+                <h3 class="offer" onclick="discount()" id="special">View Promo Code</h3>
                 <h4>Visit us at: 1275 Channel Center Street, Boston, MA 02210</h4>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.8519294874172!2d-71.05401472326109!3d42.345680171194196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a7dc2b67e7b%3A0x36ec93427cd9c5f1!2sChannel%20Center%20St%2C%20Boston%2C%20MA%2002210!5e0!3m2!1sen!2sus!4v1706541206049!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -104,6 +110,9 @@ on 01/24/2024 -->
 
                         <label for="questions"> Questions?</label>
                         <textarea id="questions" name="questions" rows="5" cols="35"></textarea>
+
+                        <label for="promo">Promo Code:</label>
+                        <input type="text" id="promo" name="promo">
                     </fieldset>
 
                     <input type="submit" id="submit" value ="Submit" class="btn">
@@ -113,11 +122,16 @@ on 01/24/2024 -->
 
         <!-- Use the footer area to add webpage footer content -->
         <footer>
-            <p>&copy; Copyright 2021. All Rights Reserved</p>
-            <p><a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>
-            
+            <div class="copyright">
+                <p>&copy; Copyright 2021. All Rights Reserved</p>
+                <p><a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>    
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com/fwdfitclub" target="_blank"><img src="images/facebook-logo.png" alt="black and white Facebook logo"></a>
+                <a href="https://twitter.com/fwdfitclub" target="_blank"><img src="images/twitter-logo.png" alt="black and white Twitter logo"></a>
+            </div>
         </footer>
-   
     </div>
 
 

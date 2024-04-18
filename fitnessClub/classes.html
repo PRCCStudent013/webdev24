@@ -3,18 +3,24 @@
 on 03/20/2024 -->
 <html lang="en">
 <head>
+    <title>Fitness Class Schedule | Forward Fitness Club</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Forward Fitness Club</title>
+    <meta name="description" content="Forward Fitness Club has many fitness classes to meet your needs, including boot camp, cardio, kickboxing, spinning, yoga, and Zumba">
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+
+    <script src="scripts/script.js" defer></script>
+
 </head>
 <body>
+    <!-- Skip to Content Link -->
+    <a class="skip" href="#content">Skip to Content</a>
 
     <div id ="container">
         <!--Mobile Nav-->
@@ -26,7 +32,7 @@ on 03/20/2024 -->
                 <a href="nutrition.html">Nutrition</a>
                 <a href="contact.html">Contact Us</a>
             </div>
-            <a class="menu-icon">
+            <a class="menu-icon" onclick="hamburger()">
                 <div>&#9776;</div>
             </a>
         </nav>
@@ -52,7 +58,7 @@ on 03/20/2024 -->
         </div>
 
         <!-- Use the main area to add the main content of the webpage -->
-        <main>
+        <main id="content">
             <div class="mobile">
 
                 <h3>Group Fitness Classes</h3>
@@ -137,9 +143,15 @@ on 03/20/2024 -->
 
         <!-- Use the footer area to add webpage footer content -->
         <footer>
-            <p>&copy; Copyright 2021. All Rights Reserved</p>
-            <p><a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>
-            
+            <div class="copyright">
+                <p>&copy; Copyright 2021. All Rights Reserved</p>
+                <p><a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>    
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com/fwdfitclub" target="_blank"><img src="images/facebook-logo.png" alt="black and white Facebook logo"></a>
+                <a href="https://twitter.com/fwdfitclub" target="_blank"><img src="images/twitter-logo.png" alt="black and white Twitter logo"></a>
+            </div>
         </footer>
     </div>
 
