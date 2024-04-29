@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <header>
+            <h1>Web Security</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="python.html">Python</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="cplusplus.html">C++</a></li>
+                <li><a href="sql.html">SQL</a></li>
+                <li><a href="web_security.html">Web Security</a></li> <!-- Active link for the current page -->
+            </ul>
+        </nav>
+        <main>
+            <section class="browser-properties">
+                <h2>Browser Properties</h2>
+                <!-- Displaying information about browser properties -->
+                <p>Browser Name: <span id="browser-name"></span></p>
+                <p>Browser Version: <span id="browser-version"></span></p>
+                <p>User Language: <span id="user-language"></span></p>
+                <p>Platform: <span id="platform"></span></p>
+                <p>Online Status: <span id="online-status"></span></p>
+                <p>User Agent: <span id="user-agent"></span></p>                
+            </section>
+
+            <section class="screen-properties">
+                <h2>Screen Properties</h2>
+                <!-- Displaying information about screen properties -->
+                <p>Screen Width: <span id="screen-width"></span> pixels</p>
+                <p>Screen Height: <span id="screen-height"></span> pixels</p>
+                <p>Available Screen Width: <span id="avail-width"></span> pixels</p>
+                <p>Available Screen Height: <span id="avail-height"></span> pixels</p>
+                <p>Color Depth: <span id="color-depth"></span> bits</p>
+                <p>Pixel Depth: <span id="pixel-depth"></span> bits per pixel</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Desmon Neapollioun</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript to populate browser and screen properties -->
+    <script>
+        // Populate browser properties
+        document.getElementById('browser-name').innerText = navigator.appName;
+        document.getElementById('browser-version').innerText = navigator.appVersion;
+        document.getElementById('user-language').innerText = navigator.language;
+        document.getElementById('platform').innerText = navigator.platform;
+        document.getElementById('online-status').innerText = navigator.onLine ? 'Online' : 'Offline';
+        document.getElementById('user-agent').innerText = navigator.userAgent;
+
+        // Populate screen properties
+        document.getElementById('screen-width').innerText = screen.width;
+        document.getElementById('screen-height').innerText = screen.height;
+        document.getElementById('avail-width').innerText = screen.availWidth;
+        document.getElementById('avail-height').innerText = screen.availHeight;
+        document.getElementById('color-depth').innerText = screen.colorDepth;
+        document.getElementById('pixel-depth').innerText = screen.pixelDepth;
+    </script>
+</body>
+</html>
