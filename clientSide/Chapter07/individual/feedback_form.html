@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <header>
+            <h1>Feedback Form</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="python.html">Python</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="cplusplus.html">C++</a></li>
+                <li><a href="sql.html">SQL</a></li>
+                <li><a href="web_security.html">Web Security</a></li>
+                <li><a href="validation.html">Validation</a></li>
+                <li><a href="feedback_form.html">Feedback Form</a></li> <!-- Active link for the current page -->
+            </ul>
+        </nav>
+        <main class="browser-properties">
+            <form id="feedbackForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+                <label for="options">Choose one or more options:</label><br>
+                <select id="options" name="options" multiple size="5">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2024 Desmon Neapollioun</p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            // Get form inputs
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Get selected options
+            var selectedOptions = [];
+            var options = document.getElementById('options').options;
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].selected) {
+                    selectedOptions.push(options[i].value);
+                }
+            }
+
+            // Convert array of selected options into a string
+            var selectedOptionsString = selectedOptions.join(', ');
+
+            // Log form data
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+            console.log("Message: " + message);
+            console.log("Selected Options: " + selectedOptionsString);
+
+            // Reset form
+            document.getElementById('feedbackForm').reset();
+        }
+
+        // Add event listener for form submission
+        document.getElementById('feedbackForm').addEventListener('submit', handleSubmit);
+    </script>
+</body>
+</html>

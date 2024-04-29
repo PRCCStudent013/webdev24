@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <header>
+            <h1>Form Validation</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="python.html">Python</a></li>
+                <li><a href="java.html">Java</a></li>
+                <li><a href="cplusplus.html">C++</a></li>
+                <li><a href="sql.html">SQL</a></li>
+                <li><a href="web_security.html">Web Security</a></li>
+                <li><a href="validation.html">Validation</a></li> <!-- Active link for the current page -->
+                <li><a href="feedback_form.html">Feedback Form</a></li>
+            </ul>
+        </nav>
+        <main class="browser-properties">
+
+            <h2>Contact Form</h2>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+                <label for="gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">Male
+                <input type="radio" id="female" name="gender" value="female">Female<br><br>
+
+                <label for="agree">I agree to the terms and conditions:</label>
+                <input type="checkbox" id="agree" name="agree" required><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <div id="errorContainer" class="error-message"></div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Desmon Neapollioun</p>
+        </footer>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var agree = document.getElementById('agree').checked;
+
+            var errorContainer = document.getElementById('errorContainer');
+            errorContainer.innerHTML = ''; // Clear previous error messages
+
+            if (!name || !email || !message || !gender || !agree) {
+                errorContainer.innerHTML = 'All fields are required.';
+                return false; // Prevent form submission
+            }
+
+            // Additional validation logic (if needed)
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
