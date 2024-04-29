@@ -126,3 +126,17 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* New styles for Browser Properties and Screen Properties */
+.browser-properties, .screen-properties {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-style: italic;
+    text-shadow:
+        1px 3px 1px #000, 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
