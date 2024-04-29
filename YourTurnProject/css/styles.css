@@ -12,7 +12,7 @@ body, header, nav, main, footer, img, h1, h2, h3, ul {
 
 /* Style rules for body and images */
 body {
-    background-image: url("/webdev24/YourTurnProject/images/240_F_252875338_y1vdA6q91Hjk3lQJhFnTq5vld7E4QzIF.jpg");
+    background-image: url("/webdev24/YourTurnProject/images/ComicBackground.jpg");
     background-size: cover;
 }
 
@@ -36,6 +36,7 @@ header h3 {
     font-size: 1.25em;
     font-family: Futura, Arial, sans-serif;
     padding-bottom: 2%;
+    text-align:center;
 }
 
 /* Style rules for navigation area */
@@ -49,11 +50,13 @@ nav ul {
 }
 
 nav li {
-    display: block;
+    display: inline-block;
     font-size: 1.5em;
     font-family: Verdana, Arial, sans-serif;
     font-weight: bold;
     border-top: 5px solid #a80000;
+    border-left: 5px solid #a80000;
+    border-right: 5px solid #a80000;
 }
 
 nav li a {
@@ -72,13 +75,18 @@ nav li a {
 /* Style rules for main content */
 main {
     padding: 2%;
-    background-color: #0d1023;
+    background-color: #c9cc80a9;
     overflow: auto;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 main h2 {
-    color: #234b95;
+    color: #A62C2B;
 }
 
 main p {
@@ -91,9 +99,10 @@ main ul {
 }
 
 .action {
-    font-size: 1.25em;
-    color: #373684;
+    font-size: 1.35em;
+    color: rgb(238, 255, 0);
     font-weight: bold;
+    text-shadow: 5px 5px 8px #000000;
 }
 
 .round {
@@ -109,13 +118,17 @@ main ul {
 }
 
 #contact .email-link {
-    color: #4645a8;
+    color: #A62C2B;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* #contact img {
+    max-width: 100%;
+    display: block;
+} */
 .tel-link {
-    background-color: #234b95;
+    background-color: #420909;
     padding: 2%;
     width: 80%;
     margin: 0 auto;
@@ -129,7 +142,7 @@ main ul {
 }
 
 .map {
-    border: 6px solid #234b95;
+    border: 6px solid #ff6200;
     width: 95%;
     height: 50%;
 }
