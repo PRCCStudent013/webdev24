@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    background-image: url('typing.gif'); /* Replace 'typing.gif' with the path to your GIF or video */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    overflow: auto; /* Allows scrolling */
+}
+
+.background-image-python {
+    background-image: url('python_background.jpg'); /* Replace 'python_background.jpg' with the path to your Python background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    overflow: auto; /* Allows scrolling */
+}
+
+.background-image-java {
+    background-image: url('java_background.jpg'); /* Replace 'java_background.jpg' with the path to your Java background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    overflow: auto; /* Allows scrolling */
+}
+
+.background-image-cplusplus {
+    background-image: url('cplusplus_background.jpg'); /* Replace 'cplusplus_background.jpg' with the path to your C++ background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    overflow: auto; /* Allows scrolling */
+}
+
+.background-image-sql {
+    background-image: url('sql_background.jpg'); /* Replace 'sql_background.jpg' with the path to your SQL background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    overflow: auto; /* Allows scrolling */
+}
+
+header, nav, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+header, nav, main, footer {
+    color: #fff; /* Adjust text color to ensure visibility */
+    /* Add any additional styling for header, nav, main, and footer here */
+}
+
+header h1, main p {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-style: italic;
+    text-shadow:
+        1px 3px 1px #000, 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+nav {
+    background-color: rgba(145, 44, 44, 0.7);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
