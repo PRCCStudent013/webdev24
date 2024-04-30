@@ -3,12 +3,13 @@
       Project 03-04
 
       Application to write a list of customer reviews
-      Author: 
-      Date:   
+      Author: Your Name
+      Date: April 30, 2024
 
       Filename: project03-04.js
 */
 
+// Arrays containing data for customer reviews
 let reviewers = ["WillHa85", "GoldFry26", "Mittens41", "Tompkins8"];
 let reviewType = ["P", "N", "", ""];
 let stars = [5, 2, 1, 4];
@@ -21,41 +22,39 @@ let reviews = [
 ];
 let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with Poor Tech Support", "Nice Improvement"];
 
-function starImages(rating)
-{
-      let imageText = "";
+// Function to generate star images based on rating
+function starImages(rating) {
+    let imageText = "";
 
-      for (let i = 0; i < rating; i++)
-      {
-            imageText += "<img src= 'star.png' alt = ''>";
-      }
+    // Loop to create the correct number of star images
+    for (let i = 0; i < rating; i++) {
+        imageText += "<img src='star.png' alt=''>";
+    }
 
-      return imageText;
+    return imageText;
 }
 
-for (let i = 0; i < reviewers.length; i++)
-{
-      let reviewCode = "";
+// Loop to create HTML code for each customer review
+for (let i = 0; i < reviewers.length; i++) {
+    let reviewCode = "";
 
-      if (reviewType[i] == "P")
-      {
-            reviewCode += "<table class='prime'>";
-      }
-      else if (reviewType[i] == "N")
-      {
-            reviewCode += "<table class='new'>";
-      }
-      else
-      {
-            reviewCode += "<table>";
-      }
+    // Conditionals to determine the type of review table
+    if (reviewType[i] == "P") {
+        reviewCode += "<table class='prime'>";
+    } else if (reviewType[i] == "N") {
+        reviewCode += "<table class='new'>";
+    } else {
+        reviewCode += "<table>";
+    }
 
-      reviewCode += "<caption>" + reviewTitles[i] + "</br>";
-      reviewCode += starImages(stars[i]) + "</caption>";
-      reviewCode += "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>";
-      reviewCode += "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>";
-      reviewCode += "<tr><td colspan='2'>" + reviews[i] + "</td></tr>";
-      reviewCode += "</table>";
+    // Adding review details to the reviewCode variable
+    reviewCode += "<caption>Review Titles " + (i+1) + "</caption>";
+    reviewCode += "<tr><th>By</th><td>" + reviewers[i] + "</td></tr>";
+    reviewCode += "<tr><th>Review Date</th><td>" + reviewDates[i] + "</td></tr>";
+    reviewCode += "<tr><td colspan='2'>" + starImages(stars[i]) + "</td></tr>"; // Calling the starImages function
+    reviewCode += "<tr><td colspan='2'>" + reviews[i] + "</td></tr>";
+    reviewCode += "</table>";
 
-      document.getElementsByTagName("article")[0].insertAdjacentElement("beforeend", reviewCode);
+    // Inserting the reviewCode HTML into the article element
+    document.getElementsByTagName("article")[0].insertAdjacentHTML("beforeend", reviewCode);
 }
