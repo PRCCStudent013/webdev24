@@ -1,0 +1,243 @@
+/*
+Author: Desmon Neapollioun
+Date: Current Date
+File Name: styles.css
+*/
+/* CSS RESET */
+body, header, nav, main, footer, img, h1, h2, h3, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-image: url("/webdev24/YourTurnProject/images/ComicBackground.jpg");
+    background-size: cover;
+}
+
+#welcome {
+    background: linear-gradient(to bottom, #ff9a9e, #fecfef); /* Gradient from pink to light pink */
+    padding: 20px; /* Add padding for better visual appearance */
+    border-radius: 5px;
+}
+
+.icon {
+    width: 10%;
+    float: left;
+    padding-bottom: 0;
+    position: relative; /* Change absolute to relative */
+    z-index: 999; /* Ensures the icon appears above other elements */
+}
+.tab-desk {
+    display: none;
+}
+
+header, nav, main, footer {
+    position: relative;
+    z-index: 1;
+}
+
+header, nav, main, footer {
+    color: #A62C2B; /* Adjust text color to ensure visibility */
+    /* Add any additional styling for header, nav, main, and footer here */
+}
+
+header h1, main p {
+    color: #A62C2B;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow:
+        3px 3px 3px #000, 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+header {
+    text-align: center;
+    color: #A62C2B;
+}
+
+header h1 {
+    font-size: 3em;
+    padding-top: 2%;
+    font-family: 'Cookie', cursive;
+}
+
+header h3 {
+    font-style: italic;
+    font-size: 1.25em;
+    font-family: Futura, Arial, sans-serif;
+    padding-bottom: 2%;
+    text-align:center;
+}
+
+/* Style rules for navigation area */
+nav {
+    background-color: #000;
+    margin-top: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    border-top: 5px solid #a80000;
+    border-left: 5px solid #a80000;
+    border-right: 5px solid #a80000;
+}
+
+nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Style rule for hero image */
+#hero {
+    text-align: center; /* Aligning the content of the hero container */
+}
+
+#hero img {
+    display: block; /* Ensuring the image is a block element */
+    margin: auto; /* Setting left and right margins to auto centers the image horizontally */
+}
+
+#heroride {
+    text-align: center;
+}
+
+#heroride img {
+    display: block;
+    margin: auto;
+    max-width: 30%;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+    overflow: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: italic;
+    text-shadow:
+        5px 5px 8px #000, 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main h2 {
+    color: #A62C2B;
+}
+
+main p {
+    font-size: 1.25em;
+}
+
+main ul {
+    list-style-type: square;
+    margin: 10%;
+}
+
+.action {
+    font-size: 1.35em;
+    color: rgb(238, 255, 0);
+    font-weight: bold;
+    font-style: italic;
+    text-shadow:
+        5px 5px 8px #000, 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.round {
+    border-radius: 10px;
+}
+
+#pamper, #full, #basic {
+    margin: 0 2%;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact .email-link {
+    color: #A62C2B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* #contact img {
+    max-width: 100%;
+    display: block;
+} */
+.tel-link {
+    background-color: #420909;
+    padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 115%;
+}
+
+.tel-link a {
+    color: #f6eee4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map {
+    border: 6px solid #ff6200;
+    width: 95%;
+    height: 50%;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    clear: left;
+    color: #234b95;
+    font-weight: bold;
+}
+
+footer a {
+    color: #234b95;
+    text-decoration: none;
+}
+
+/* Reduce the size of images */
+.service img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    width: 300px; /* Set maximum width for consistency */
+}
+
+/* Adjust spacing between images and text */
+.service ul {
+    margin-top: 10px; /* Add space between image and text */
+    padding-left: 0; /* Remove default left padding from the ul */
+    list-style: none; /* Remove default list style */
+}
+
+.service ul li {
+    margin-bottom: 5px; /* Add space between list items */
+}

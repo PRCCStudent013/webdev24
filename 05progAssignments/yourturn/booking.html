@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Paw Pals Emporium: Booking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="icon">
+        <a href="index.html"><img src="images/icon.jpg" alt="Paw Pals Logo"></a>
+    </div>
+    <header>
+        <h1>Paw Pals Emporium</h1>
+        <h3>* Your Pets needs is ALWAYS our number <span class="action">ONE</span> priority!</h3>
+    </header>
+    
+    <nav class="mobile-nav">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="groomers.html">Groomers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Image -->
+    <div id="hero">
+        <img src="images/dogbanner.jpg" alt="Dog Icon">
+    </div>
+    
+    <!-- Use the main area to add the main content of the webpage -->
+    <main>
+        
+        <div id="booking">
+            <h2>Book an Appointment</h2>
+            <p>To schedule an appointment for grooming services, please fill out the form below. Our team will contact you shortly to confirm your appointment details.</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="pet">Pet's Name:</label><br>
+                <input type="text" id="pet" name="pet" required><br>
+                <label for="service">Service:</label><br>
+                <select id="service" name="service" required>
+                    <option value="basic">Basic Grooming</option>
+                    <option value="full">Full Grooming</option>
+                    <option value="pamper">Luxury Pampering</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+            
+    </main>
+    
+    <footer>
+        <p>&copy; Copyright 2024. All Rights Reserved.</p>
+        <p><a href="mailto:contact@pawpalinc.net">contact@pawpalinc.net</a></p>
+    </footer>
+    
+</body>
+</html>

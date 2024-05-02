@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: rgb(95, 94, 94, 0.842);
+    border-radius: 8px;
+}
+
+a:link {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #fff;
+    background-color: rgba(95, 94, 94, 0.842);
+    border-radius: 8px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Define the grid container for client-side only! */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    grid-gap: 10px; /* Add some space between grid items */
+
+    /* fallback height */
+   min-height:100vh;
+
+   /* new small viewport height for modern browsers */
+   min-height:100svh;
+}
+  
+/* Define the grid items */
+.grid-item {
+    background-color: #b6b6b6; /* Add a background color to the grid items */
+    padding: 10px; /* Add some padding to the grid items */
+    text-align: center; /* Center the content of the grid items */
+    border-radius: 8px;
+}
+
+/* Define the grid container for showcase only! */
+.grid-container-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    grid-gap: 10px; /* Add some space between grid items */
+
+    /* fallback height */
+   min-height:100vh;
+
+   /* new small viewport height for modern browsers */
+   min-height:100svh;
+}
+
+.grid-container-header .grid-item h2{
+    background-color: #333; /* Add a background color to the grid items */
+    color: #fff;
+    padding: 20px; /* Add some padding to the grid items */
+    text-align: center; /* Center the content of the grid items */
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
