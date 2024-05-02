@@ -1,66 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>Paw Pals Emporium: Booking</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
+    <div class="icon">
+        <a href="index.html"><img src="images/icon.jpg" alt="Paw Pals Logo"></a>
+    </div>
     <header>
-        <h1>Styling the Dog Grooming Website</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Paw Pals Emporium</h1>
+        <h3>* Your Pets needs is ALWAYS our number <span class="action">ONE</span> priority!</h3>
     </header>
+    
+    <nav class="mobile-nav">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="groomers.html">Groomers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Image -->
+    <div id="hero">
+        <img src="images/dogbanner.jpg" alt="Dog Icon">
+    </div>
+    
+    <!-- Use the main area to add the main content of the webpage -->
     <main>
-        <h2>Booking</h2>
-        <table>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-                <th>Column 3</th>
-            </tr>
-            <tr>
-                <td>Row 1, Cell 1</td>
-                <td>Row 1, Cell 2</td>
-                <td>Row 1, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td>
-                <td>Row 2, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 3, Cell 1</td>
-                <td>Row 3, Cell 2</td>
-                <td>Row 3, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 4, Cell 1</td>
-                <td>Row 4, Cell 2</td>
-                <td>Row 4, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 5, Cell 1</td>
-                <td>Row 5, Cell 2</td>
-                <td>Row 5, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 6, Cell 1</td>
-                <td>Row 6, Cell 2</td>
-                <td>Row 6, Cell 3</td>
-            </tr>
-        </table>
+        
+        <div id="booking">
+            <h2>Book an Appointment</h2>
+            <p>To schedule an appointment for grooming services, please fill out the form below. Our team will contact you shortly to confirm your appointment details.</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="pet">Pet's Name:</label><br>
+                <input type="text" id="pet" name="pet" required><br>
+                <label for="service">Service:</label><br>
+                <select id="service" name="service" required>
+                    <option value="basic">Basic Grooming</option>
+                    <option value="full">Full Grooming</option>
+                    <option value="pamper">Luxury Pampering</option>
+                </select><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            
+            <!-- Table -->
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Groomer</th>
+                </tr>
+                <tr>
+                    <td>April 15, 2024</td>
+                    <td>10:00 AM</td>
+                    <td>John</td>
+                </tr>
+                <tr>
+                    <td>April 17, 2024</td>
+                    <td>2:00 PM</td>
+                    <td>Emily</td>
+                </tr>
+                <tr>
+                    <td>April 20, 2024</td>
+                    <td>11:30 AM</td>
+                    <td>Michael</td>
+                </tr>
+                <tr>
+                    <td>April 22, 2024</td>
+                    <td>9:00 AM</td>
+                    <td>Sarah</td>
+                </tr>
+                <tr>
+                    <td>April 25, 2024</td>
+                    <td>3:30 PM</td>
+                    <td>David</td>
+                </tr>
+                <tr>
+                    <td>April 28, 2024</td>
+                    <td>1:00 PM</td>
+                    <td>Jessica</td>
+                </tr>
+            </table>
+            
+        </div>
+            
     </main>
+    
     <footer>
-        &copy; 2024 Dog Grooming. All rights reserved.
+        <p>&copy; Copyright 2024. All Rights Reserved.</p>
+        <p><a href="mailto:contact@pawpalinc.net">contact@pawpalinc.net</a></p>
     </footer>
+    
 </body>
 </html>
