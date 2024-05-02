@@ -85,7 +85,7 @@ main {
 /* Define the grid items */
 .grid-item {
     background-color: #b6b6b6; /* Add a background color to the grid items */
-    padding: 10px; /* Add some padding to the grid items */
+    padding: 1px; /* Add some padding to the grid items */
     text-align: center; /* Center the content of the grid items */
     border-radius: 8px;
 }
@@ -97,18 +97,18 @@ main {
     grid-gap: 10px; /* Add some space between grid items */
 
     /* fallback height */
-   min-height:100vh;
+   min-height:20vh;
 
    /* new small viewport height for modern browsers */
-   min-height:100svh;
+   min-height:20svh;
 }
 
 .grid-container-header .grid-item h2{
     background-color: #333; /* Add a background color to the grid items */
     color: #fff;
-    padding: 20px; /* Add some padding to the grid items */
+    padding: 1px; /* Add some padding to the grid items */
     text-align: center; /* Center the content of the grid items */
-    border-radius: 8px;
+    border-radius: 1px;
 }
 
 footer {
