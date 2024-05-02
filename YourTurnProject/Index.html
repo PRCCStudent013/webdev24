@@ -4,7 +4,7 @@
     <title>Paw Pals Emporium</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Cookie|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie%7C+Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="scripts/script.js" defer></script>
     <link rel="icon" type="image/png" href="images/favicon.ico">
@@ -21,7 +21,6 @@
     
     <nav class="mobile-nav">
         <!-- Inside the navigation bar -->
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul>
@@ -50,16 +49,16 @@
 
         <!-- Video Section -->
         <div id="video-container">
-            <video controls poster="media/video-poster.jpg">
+            <video controls>
                 <source src="media/groom.mp4" type="video/mp4">
                 <source src="media/groom.webm" type="video/webm">
-                <!-- Fallback for browsers that don't support HTML5 video -->
+                <!-- Captions -->
+                <track src="media/captions.vtt" kind="subtitles" srclang="en" label="English Captions">
+                <!-- Descriptions -->
+                <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English Descriptions">
                 Your browser does not support the video tag.
             </video>
-            <!-- Captions -->
-            <track src="media/captions.vtt" kind="subtitles" srclang="en" label="English Captions">
-            <!-- Descriptions -->
-            <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English Descriptions">
+
         </div>
             
     </main>

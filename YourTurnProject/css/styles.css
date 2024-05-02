@@ -77,7 +77,7 @@ header h3 {
 /* Style rules for navigation area */
 nav {
     background-color: #000;
-    margin-top: 0 auto;
+    margin-top: auto;
 }
 
 nav ul {
@@ -233,7 +233,7 @@ footer a {
 
 /* Adjust spacing between images and text */
 .service ul {
-    margin-top: 10px; /* Add space between image and text */
+    margin-top: auto; /* Add space between image and text */
     padding-left: 0; /* Remove default left padding from the ul */
     list-style: none; /* Remove default list style */
 }
